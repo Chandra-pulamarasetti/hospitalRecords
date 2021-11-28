@@ -1,0 +1,52 @@
+
+/* ------------------------------- Removing a add strip from height and weight inputs ---------------------*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ------------------------------- No Button animations ---------------------*/
+@keyframes noglowing {
+    0% {
+      background-color: #5dadec;
+      box-shadow: 0 0 5px #5dadec;
+    }
+    50% {
+      background-color: #5dadec;
+      box-shadow: 0 0 20px #5dadec;
+    }
+    100% {
+      background-color: #5dadec;
+      box-shadow: 0 0 5px #5dadec;
+    }
+  }
+  
+  #noButton:hover {
+    animation: noglowing 1300ms infinite;
+  }
+
+/* ------------------------------- yes Button animations ---------------------------------*/
+
+  @keyframes yesglowing {
+    0% {
+      background-color: #db5f12;
+      box-shadow: 0 0 10px #db5f12;
+    }
+    50% {
+      background-color: #db5f12;
+      box-shadow: 0 0 30px #db5f12;
+    }
+    100% {
+      background-color: #db5f12;
+      box-shadow: 0 0 10px #db5f12;
+    }
+  }
+  
+  #yesButton:hover {
+    animation: yesglowing 1300ms infinite;
+  }
+
+  /* ------------------------------- Close Button animations ---------------------------------*/
+
