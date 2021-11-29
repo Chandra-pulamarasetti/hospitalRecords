@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="css/bootstrap.min-2.css">
-    
-    <title>Bheeshma Hospitals - Patient's Data</title>
+
+
+    <title>Login | Bheeshma Hospitals</title>
 
 </head>
 <body>
 
-    <!-- ------------------------Login form ------------------------------------------------>
+    <!-- ------------------------Login form (start)------------------------------------------------>
     <section class="vh-100" style="background-color: #9A616D;">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -36,7 +37,32 @@
                           <span class="h1 fw-bold mb-0" style="text-align: center;">Bheeshma Hospitals</span>
                         </div>
       
-                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+                        <hr>
+<!-- --------------------------------- Radio buttons for admin and user accounts (open)--------------------------------------------------------->                       
+
+                        <div class="form-check form-check-inline mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio1"
+                            value="option1"
+                            checked
+                          />
+                          <label class="form-check-label" for="inlineRadio1">User</label>
+                        </div>
+
+                        <div class="form-check form-check-inline mb-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="inlineRadioOptions"
+                            id="inlineRadio2"
+                            value="option2"
+                          />
+                          <label class="form-check-label" for="inlineRadio2">Admin</label>
+                        </div>
+<!-- --------------------------------- Radio button (close)--------------------------------------------------------->                       
       
                         <div class="form-outline mb-4">
                           <input type="email" id="form2Example17" class="form-control form-control-lg" />
@@ -53,7 +79,7 @@
                         </div>
       
                         <a class="small text-muted" href="#!">Forgot password?</a>
-                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!" style="color: #393f81;">Register here</a></p>
+                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="register.html" style="color: #393f81;">Register here</a></p>
                         <a href="#!" class="small text-muted">Terms of use.</a>
                         <a href="#!" class="small text-muted">Privacy policy</a>
                       </form>
@@ -68,7 +94,12 @@
       </section>
 
     
-    <!-- ------------------------Login form ------------------------------------------------>
+    <!-- ------------------------Login form (close)------------------------------------------------>
+
     
+    
+
+<script src="js/login.js"></script>
+
 </body>
 </html>

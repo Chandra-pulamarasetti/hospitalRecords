@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min-2.css">
+
+
+    <title>Register | Bheeshma Hospitals</title>
+</head>
+<body>
+    
+<!-- -----------------------------New User Registration (open)-------------------------------------->
+    <section id="registration" style="margin-top: 10px;" >
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center" >
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card bg-success text-info" style="border-radius: 1rem;">
+                <div class="card-body p-5">
+      
+                  <div class="mb-md-1 mt-md-2 pb-3">
+                      <h3 class="fw-bold text-uppercase" style="color: salmon;">Bheeshma Hospitals</h3>
+                    <h5 class="fw-bold mb-3 text-uppercase" style="color: skyblue;">New User Registration</h5>
+                    <p id="errorDetails" ></p>
+                    <div class="form-outline form-white mb-2">
+                        <label class="form-label" for="typeEmailX" style="font-weight: bold;">UserName</label>
+                      <input type="email" id="typeName" class="form-control form-control-lg" />
+                      <p id="errName" style="color: salmon; font-weight: bold;"></p>
+                    </div>
+                    <div class="form-outline form-white mb-2">
+                        <label class="form-label" for="typeEmailX" style="font-weight: bold;">Email</label>
+                        <input type="email" id="typeEmail" class="form-control form-control-lg" />
+                        <p id="errEmail" style="color: salmon;font-weight: bold"></p>
+                      </div>
+      
+                    <div class="form-outline form-white mb-2">
+                        <label class="form-label" for="typePasswordX" style="font-weight: bold;">New Password</label>
+                      <input type="password" id="typePassword" class="form-control form-control-lg" />
+                      <p id="errPassword" style="color: salmon;font-weight: bold">Enter password </p>
+                    </div>      
+                    <div class="form-outline form-white mb-3">
+                        <label class="form-label" for="typePasswordX" style="font-weight: bold;">Confirm Password</label>
+                        <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                        <p id="errConfPassword" style="color: salmon;font-weight: bold">Enter confirm password</p>
+                      </div> 
+                      <form action=""></form> 
+                    <button id="register-form" class="btn btn-outline-light btn-lg px-5" type="button" onclick=complete() >Register</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- -----------------------------New User Registration (close)-------------------------------------->
+  
+
+      <script src="js/register.js"></script>
+
+</body>
+</html>
