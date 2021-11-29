@@ -96,7 +96,9 @@ function userLogin(){
 
     function accountUser(){
         let userID = document.getElementById('userID').value;
-    let userPassword = document.getElementById('userPassword').value;
+        let userPassword = document.getElementById('userPassword').value;
+        let emails = UserSearch.Emails()
+        let passwords = UserSearch.Passwords()
 
     if(userID === '' && userPassword === '') {
         document.getElementById('userID').style.border = '2px solid salmon';
@@ -129,7 +131,7 @@ function userLogin(){
         document.getElementById('userPassword').focus()
      }
      else{
-         if (userID === 'admin' && userPassword === '1234'){
+         if ((emails.indexOf(userID) >= 0) && (passwords.indexOf(userPassword) >= 0) ){
              clearFields()
             return setTimeout(timeout("index.html"), 3000)
          }
@@ -145,4 +147,23 @@ function userLogin(){
 function clearFields() {
     document.querySelector('#userID').value = '';
     document.querySelector('#userPassword').value = '';
+  }
+
+  class UserSearch {
+    static Emails(){
+      var users = JSON.parse(localStorage.getItem('users'))
+      var emails = []
+      for (var i=0; i<users.length ;i++) {
+        emails.push(users[i].email)
+      }
+      return emails
+    }
+    static Passwords(){
+      var users = JSON.parse(localStorage.getItem('users'))
+      var passwords = []
+      for (var i=0; i<users.length ;i++) {
+        passwords.push(users[i].password)
+      }
+      return passwords
+    }
   }
