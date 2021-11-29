@@ -1,5 +1,4 @@
 // *********************** Class for storing the credentials **************************
-
 class StoreData {
     static getUsers() {
         let users;
@@ -16,7 +15,7 @@ class StoreData {
         localStorage.setItem('users', JSON.stringify(users));
       }
       static removeUser(user) {
-        const users = StoreData.getBooks();
+        const users = StoreData.getUsers();
         users.forEach((each, index) => {
           if(each.name === user) {
             users.splice(index, 1);
@@ -51,25 +50,7 @@ class StoreData {
             document.getElementById('typePasswordX').value = '';
           }
     }
-// ************************************ Search users data ***************************
-class searchDetails {
-    static accountNames() {
-      var users = JSON.parse(localStorage.getItem('users'))
-      var names = []
-      for (var i=0; i<users.length ;i++) {
-        names.push(users[i].name)
-      }
-      return names
-    }
-    static accountEmails(){
-      var users = JSON.parse(localStorage.getItem('users'))
-      var emails = []
-      for (var i=0; i<users.length ;i++) {
-        emails.push(users[i].email)
-      }
-      return emails
-    }
-  }
+
 // **************************** Instantiate user data ************************************
 
 function newData() {
@@ -78,7 +59,7 @@ function newData() {
     let password = document.getElementById('typePassword').value;
     let confPassword = document.getElementById('typePasswordX').value;
     let names = searchDetails.accountNames();
-    let emails = searchDetails.accountEmails();
+   let emails = searchDetails.accountEmails();
 
      if(name === '' && email === '' && password === '' && confPassword === '') {
         document.getElementById('typeName').style.border = '2px solid salmon';
@@ -128,7 +109,7 @@ function newData() {
         setTimeout(errorEmail, 3000);
         document.getElementById('typeEmail').focus()
      }
-     else if (emails.indexOf(email) >= 0){
+    else if (emails.indexOf(email) >= 0){
         document.getElementById('typeEmail').style.border = '2px solid salmon';
         document.getElementById('errEmail').innerHTML = 'Email address alrady taken'
         document.getElementById('errEmail').style.display = 'block';
@@ -235,6 +216,26 @@ document.getElementById('errEmail').style.display  = 'none';
 document.getElementById('errPassword').style.display = 'none';
 document.getElementById('errConfPassword').style.display = 'none';
 document.getElementById('errorDetails').style.display = 'none';
+
+// ************************************ Search users data ***************************
+class searchDetails {
+  static accountNames() {
+    var users = JSON.parse(localStorage.getItem('users'))
+    var names = []
+    for (var i=0; i<users.length ;i++) {
+      names.push(users[i].name)
+    }
+    return names
+  }
+  static accountEmails(){
+    var users = JSON.parse(localStorage.getItem('users'))
+    var emails = []
+    for (var i=0; i<users.length ;i++) {
+      emails.push(users[i].email)
+    }
+    return emails
+  }
+}
 
 // ***************************************** Registering ***********************************************
 

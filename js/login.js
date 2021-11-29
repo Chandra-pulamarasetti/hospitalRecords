@@ -48,6 +48,7 @@ function adminLogin(){
      }
      else{
          if (userID === 'admin' && userPassword === '1234'){
+             clearFields()
             return setTimeout(timeout("admin.html"), 3000)
          }
 
@@ -129,6 +130,7 @@ function userLogin(){
      }
      else{
          if (userID === 'admin' && userPassword === '1234'){
+             clearFields()
             return setTimeout(timeout("index.html"), 3000)
          }
 
@@ -139,3 +141,8 @@ function userLogin(){
     }
 }
 
+
+function clearFields() {
+    document.querySelector('#userID').value = '';
+    document.querySelector('#userPassword').value = '';
+  }
